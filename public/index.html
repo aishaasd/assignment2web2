@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Random User Information Generator</h1>
+            <p>Discover random users from around the world with detailed information</p>
+        </header>
+
+        <div class="button-container">
+            <button id="generateBtn" class="generate-btn">Generate Random User</button>
+        </div>
+
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Loading user information...</p>
+        </div>
+
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+
+        <div id="contentContainer" style="display: none;">
+            <!-- User Profile Section -->
+            <section class="user-profile">
+                <div class="profile-card">
+                    <img id="profilePicture" src="" alt="Profile Picture" class="profile-image">
+                    <div class="profile-info">
+                        <h2 id="fullName"></h2>
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <span class="label">Gender:</span>
+                                <span id="gender"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Age:</span>
+                                <span id="age"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Date of Birth:</span>
+                                <span id="dob"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">City:</span>
+                                <span id="city"></span>
+                            </div>
+                            <div class="info-item">
+                                <span class="label">Country:</span>
+                                <span id="country"></span>
+                            </div>
+                            <div class="info-item full-width">
+                                <span class="label">Address:</span>
+                                <span id="address"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Country Information Section -->
+            <section class="country-section">
+                <h2>Country Information</h2>
+                <div class="country-card">
+                    <img id="countryFlag" src="" alt="Country Flag" class="country-flag">
+                    <div class="country-info">
+                        <div class="info-item">
+                            <span class="label">Country:</span>
+                            <span id="countryName"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Capital:</span>
+                            <span id="capital"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Languages:</span>
+                            <span id="languages"></span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Currency:</span>
+                            <span id="currency"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exchange Rates -->
+                <div id="exchangeRatesSection" class="exchange-rates">
+                    <h3>Exchange Rates</h3>
+                    <div class="rates-grid">
+                        <div class="rate-item">
+                            <span class="rate-label">To USD:</span>
+                            <span id="rateUSD" class="rate-value"></span>
+                        </div>
+                        <div class="rate-item">
+                            <span class="rate-label">To KZT:</span>
+                            <span id="rateKZT" class="rate-value"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- News Section -->
+            <section class="news-section">
+                <h2>Latest News</h2>
+                <div id="newsContainer" class="news-grid"></div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
